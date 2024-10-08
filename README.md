@@ -7,18 +7,17 @@ This tool processes drone-captured images of water surfaces, removing cloud refl
 </p>
 
 ## Steps Involved:
-1. **Image Loading**: The image is loaded using OpenCV (`cv2.imread`).
-2. **Green Area Segmentation**:
+1. **Green Area Segmentation**:
    - The image is converted to HSV (Hue, Saturation, Value) color space using `cv2.cvtColor`.
    - A mask is created to detect green regions in the image using predefined HSV values (`lower_green` and `upper_green`). This mask allows us to identify and retain vegetation or algae present on the water surface.
-3. **Cloud Reflectance Detection**:
+2. **Cloud Reflectance Detection**:
    - The original image is converted to grayscale for cloud detection.
    - A threshold is applied to detect the highly reflective cloud regions.
    - The mask is inverted to target non-cloud areas.
-4. **Combining Masks**:
+3. **Combining Masks**:
    - The green mask and cloud mask are combined to retain only the green areas and remove clouds.
    - The combined mask is applied to the original image to create the final processed result.
-5. **Result Visualization**:
+4. **Result Visualization**:
    - The output is displayed as a plot with four images:
      - **Original Image**: The raw drone image.
      - **Final Result**: The image after cloud removal and green area retention.
