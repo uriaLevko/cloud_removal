@@ -1,6 +1,9 @@
 # cloud_removal
 ## Tool Overview:
 This tool processes drone-captured images of water surfaces, removing cloud reflections while retaining green areas (such as algae or vegetation). It uses color segmentation and thresholding techniques to achieve this.
+<p align="center">
+<img src="remove_clouds.png" width=50% height=50% >
+</p>
 ## Steps Involved:
 1. **Image Loading**: The image is loaded using OpenCV (`cv2.imread`).
 2. **Green Area Segmentation**:
